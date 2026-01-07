@@ -8,7 +8,7 @@ For example:
 ---
 
 ## Part 1:
-### [Watch on Youtube](https://www.youtube.com/@RogaRy)
+### [Watch on Youtube](https://youtu.be/bLTyN340vZI)
 
 In part one, we don't have many python features unlocked, so we have a smiple while loop that traverses our grid, plants trees in a grid, and plants carrots and bushes in the other open tiles. 
 
