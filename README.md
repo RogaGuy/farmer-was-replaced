@@ -22,3 +22,24 @@ In part one, we don't have many python features unlocked, so we have a smiple wh
 - Loops
 - Operators
 
+## Part 2:
+### [Watch on Youtube](https://www.youtube.com/@RogaRy)
+
+In part two, we focus on refactoring our code and using modules and functions to create a larger system. We also begin working on pumpkins.
+
+### Game Unlocks:
+- 4x4
+- Carrots
+- Bushes
+- Trees
+- Water
+- Pumpkins
+
+
+### Python Unlocks
+- Loops
+- Operators
+- senses
+- lists & sets
+- functions
+- modules
