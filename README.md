@@ -23,7 +23,7 @@ In part one, we don't have many python features unlocked, so we have a smiple wh
 - Operators
 
 ## Part 2:
-### [Watch on Youtube](https://www.youtube.com/@RogaRy)
+### [Watch on Youtube](https://youtu.be/E0uMhlhmqr4)
 
 In part two, we focus on refactoring our code and using modules and functions to create a larger system. We also begin working on pumpkins.
 
