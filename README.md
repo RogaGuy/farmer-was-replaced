@@ -5,7 +5,10 @@ This repository will store the progress from each part of my playthrough of 'The
 For example: 
  Code from Part 1 will be in branch ```part-1```
 
----
+There is a corresponding series of videos on YouTube where each video in the series corresponds to a branch in the repository.
+[The Full Youtube Playlist is Available here](https://www.youtube.com/playlist?list=PLPhCP2qt1ox6x7m3I-KsRVIWksXP8PfqO)
+
+
 
 ## Part 1:
 ### [Watch on Youtube](https://youtu.be/bLTyN340vZI)
@@ -43,3 +46,30 @@ In part two, we focus on refactoring our code and using modules and functions to
 - lists & sets
 - functions
 - modules
+
+
+## Part 3:
+### [Watch on Youtube](https://www.youtube.com/playlist?list=PLPhCP2qt1ox6x7m3I-KsRVIWksXP8PfqO)
+
+In part three, we add point to point navigation, drastically improve on the first iteration of pumpkins, expand our plot (finally!) and finally add sunflowers
+
+### Game Unlocks:
+- 8x8
+- Carrots
+- Bushes
+- Trees
+- Water
+- Pumpkins
+- Sunflowers
+
+
+### Python Unlocks
+- Loops
+- Operators
+- senses
+- lists & sets
+- functions
+- modules
+- dictionaries
+- utilities (min, max, abs)
+- debugging (print)
