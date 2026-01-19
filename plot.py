@@ -1,8 +1,8 @@
-def traverse_plot(action):
+def traverse_plot(action, action_param=None):
 	result_list = []
 	for y in range(get_world_size()):
 		for x in range(get_world_size()):
-			action_result = action()
+			action_result = action(action_param)
 			if action_result:
 				result_list.append(action_result)
 			move(East)
@@ -10,14 +10,14 @@ def traverse_plot(action):
 	return result_list
 
 	
-def traverse_coordinates(coordinate_list, action):
+def traverse_coordinates(coordinate_list, action, action_param=None):
 	# coordinate list will be a list of tuples (x_cord, y_cord)
 	# TODO: optptionally, sort the list
 	
 	result_list = []
 	for coordinate in coordinate_list:
 		move_to_coordinate(coordinate[0], coordinate[1])
-		action_result = action()
+		action_result = action(action_param)
 		if action_result:
 			result_list.append(action_result)
 	return result_list
