@@ -49,7 +49,7 @@ In part two, we focus on refactoring our code and using modules and functions to
 
 
 ## Part 3:
-### [Watch on Youtube](https://www.youtube.com/playlist?list=PLPhCP2qt1ox6x7m3I-KsRVIWksXP8PfqO)
+### [Watch on Youtube - Coming Soon!](https://www.youtube.com/playlist?list=PLPhCP2qt1ox6x7m3I-KsRVIWksXP8PfqO)
 
 In part three, we add point to point navigation, drastically improve on the first iteration of pumpkins, expand our plot (finally!) and finally add sunflowers
 
@@ -61,6 +61,35 @@ In part three, we add point to point navigation, drastically improve on the firs
 - Water
 - Pumpkins
 - Sunflowers
+
+
+### Python Unlocks
+- Loops
+- Operators
+- senses
+- lists & sets
+- functions
+- modules
+- dictionaries
+- utilities (min, max, abs)
+- debugging (print)
+
+
+## Part 4:
+### [Watch on Youtube - Coming Soon!](https://www.youtube.com/playlist?list=PLPhCP2qt1ox6x7m3I-KsRVIWksXP8PfqO)
+
+In part four, I realized I did not actually know what polyculture involved and, even though it was a fairly simple concept, I wound up on the struggle bus. Fertilizer was also unlocked, but the risks didn't seem to outweigh the rewards, so that may be for a future part.
+
+### Game Unlocks:
+- 8x8
+- Carrots
+- Bushes
+- Trees
+- Water
+- Pumpkins
+- Sunflowers
+- Polyculture
+- Fertilizer
 
 
 ### Python Unlocks
