@@ -1,6 +1,6 @@
 import farming
 
-
+# TODO: probably delete this
 def trees_and_carrots(param):
 	# param is unused, but actions need to handle an optional parameter
 	x_pos = get_pos_x()
@@ -57,7 +57,7 @@ def hay_carrots(param):
 	# harvesting
 	if can_harvest():
 		harvest()
-		
+
 	if get_pos_y() >= get_world_size() / 2:
 		farming.plant_till_and_water(Entities.Carrot, False)
 	else:
@@ -75,3 +75,41 @@ def plant_sunflowers(param):
 def harvest_only(param):
 	# param is unused
 	harvest()
+
+
+def polyculture(current_companions):
+	current_x = get_pos_x()
+	current_y = get_pos_y()
+	current_coord = (current_x, current_y)
+	
+	desired_entity = Entities.Grass
+	harvest_result = farming.harvest_if_able()
+
+	remove_index = None
+	for companion in current_companions:
+	# for c in range(len(current_companions)):
+		source_coord, companion_coord, companion_entity = companion
+		src_x, src_y = source_coord
+		cmp_x, cmp_y = companion_coord
+
+		if harvest_result:
+			if (current_x == src_x and current_y == src_y):
+				current_companions.remove(companion)
+
+		if cmp_x == current_x and cmp_y == current_y:
+			desired_entity = companion_entity
+
+	should_water = (desired_entity == Entities.Tree)
+	plant_status = farming.plant_till_and_water(desired_entity, should_water)
+	if plant_status:
+		companion = get_companion()
+		if companion:
+			companion_entity, companion_coord = companion
+			return (current_coord, companion_coord, companion_entity)
+		return None
+
+	else:
+		quick_print("unable to print " + str(desired_entity) + " on ground " + str(get_ground_type()))
+		return None
+
+	

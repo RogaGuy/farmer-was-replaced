@@ -22,4 +22,10 @@ def plant_till_and_water(entity, should_water=False, water_below=.25, water_to=.
 	if should_water and get_water() < water_below and not can_harvest():
 		while get_water() <= water_to and num_items(Items.Water) > 0:
 			use_item(Items.Water)
-	return plant_status
+	return (plant_status or entity == Entities.Grass)
+
+
+def harvest_if_able():
+	if can_harvest():
+		return harvest()
+	return False

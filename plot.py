@@ -1,7 +1,14 @@
-def traverse_plot(action, action_param=None):
-	result_list = []
+
+def traverse_plot(action, action_param=None, result_list_as_action_param=False, starting_result_list = []):
+	result_list = starting_result_list
 	for y in range(get_world_size()):
 		for x in range(get_world_size()):
+			
+			# if action requires the current list of results to run
+			# and no other action_param provided, replace action_param with result list
+			if result_list_as_action_param and not action_param:
+				action_param = result_list
+				
 			action_result = action(action_param)
 			if action_result:
 				result_list.append(action_result)
@@ -21,7 +28,6 @@ def traverse_coordinates(coordinate_list, action, action_param=None):
 		if action_result:
 			result_list.append(action_result)
 	return result_list
-
 	
 	
 def move_to_coordinate(x_val, y_val):
