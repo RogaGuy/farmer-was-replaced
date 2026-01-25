@@ -49,9 +49,10 @@ In part two, we focus on refactoring our code and using modules and functions to
 
 
 ## Part 3:
-### [Watch on Youtube](https://www.youtube.com/playlist?list=PLPhCP2qt1ox6x7m3I-KsRVIWksXP8PfqO)
+### [Watch on Youtube](https://youtu.be/w_hXN10OzPk)
 
-In part three, we add point to point navigation, drastically improve on the first iteration of pumpkins, expand our plot (finally!) and finally add sunflowers
+In part three, we add point to point navigation, improve the pumpkins code from the last part, gather some resources for new unlocks, and complete our first version of the sunflower logic!
+Some areas need some small fixes and refactors, but we will start Part5 with some more dedicated refactoring and clean-up!
 
 ### Game Unlocks:
 - 8x8
