@@ -50,28 +50,52 @@ def hay_wood_carrot(param):
 	return None
 
 
-# TODO: can probably be deleted
-def hay_carrots(param):
-	# param is unused, but actions need to handle an optional parameter
-	
-	# harvesting
-	if can_harvest():
-		harvest()
-		
-	if get_pos_y() >= get_world_size() / 2:
-		farming.plant_till_and_water(Entities.Carrot, False)
-	else:
-		farming.plant_till_and_water(Entities.Grass, False)
-
-
 def plant_sunflowers(param):
 	# param is unused
-	plant_status = farming.plant_till_and_water(Entities.Sunflower, False)
+	plant_status = farming.plant_till_and_water(Entities.Sunflower, True)
 	if plant_status:
 		plant_measure = measure()
 		return (plant_measure, (get_pos_x(), get_pos_y()))
+	return None
 
 
 def harvest_only(param):
+	return farming.harvest_if_able()
 	# param is unused
-	harvest()
+
+
+def polyculture(polyculture_tuple):
+	# 2 tasks:
+		# 1 - harvest what's under us
+		# 2 - update companion list if needed
+		# 3 - determine what to plant, and plant it
+	active_companion_list, desired_entity = polyculture_tuple
+	
+	current_coord = (get_pos_x(), get_pos_y())
+	sensed_entity = get_entity_type()
+	harvest_status = farming.harvest_if_able()
+	
+	if (not harvest_status) and sensed_entity:
+		return None
+	
+	for c in active_companion_list:
+		if c["src_coord"] == current_coord:
+			active_companion_list.remove(c)
+			break
+		
+	found_companion = False
+	for c in active_companion_list:
+		if c["companion_coord"] == current_coord:
+			farming.plant_till_and_water(c["entity"], True)
+			found_companion = True
+			break
+			
+	if not found_companion:
+		farming.plant_till_and_water(desired_entity, True)
+		
+	c_ent, c_coord = get_companion()
+	active_companion_list.append({
+		"src_coord": current_coord,
+		"companion_coord": c_coord,
+		"entity": c_ent
+	})

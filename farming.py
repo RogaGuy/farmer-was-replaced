@@ -3,10 +3,8 @@ GRASSLAND_ENTITIES = [Entities.Grass, Entities.Bush, Entities.Tree]
 
 
 def plant_till_and_water(entity, should_water=False, water_below=.25, water_to=.7):
-	if water_to > 1:
-		water_to = 1
-	if water_below >= 1:
-		water_below = .7
+	water_to = min(water_to, 1)
+	water_below = min(water_below, 1)
 
 	desired_ground = Grounds.Grassland
 	if entity not in GRASSLAND_ENTITIES:
@@ -23,3 +21,12 @@ def plant_till_and_water(entity, should_water=False, water_below=.25, water_to=.
 		while get_water() <= water_to and num_items(Items.Water) > 0:
 			use_item(Items.Water)
 	return plant_status
+
+
+def harvest_if_able():
+	if can_harvest():
+		return harvest()
+	return False
+	
+
+# TODO: harvest when able
