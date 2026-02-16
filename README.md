@@ -101,3 +101,32 @@ In part four, we tidy up some code, improve our traversal logic, and tackle poly
 - dictionaries
 - utilities (min, max, abs)
 - debugging (print)
+
+
+## Part 5:
+### [Watch on Youtube - Coming Soon!]
+
+In part five, we start looking at the mysterious numbers when measuring pumpkins, we sort some cacti, and we celebrate by unlocking a bunch of things!
+
+### Game Unlocks:
+- 16x16
+- Carrots
+- Bushes
+- Trees
+- Water
+- Pumpkins
+- Sunflowers
+- Polyculture
+- Cacti
+
+### Python Unlocks
+- Loops
+- Operators
+- senses
+- lists & sets
+- functions
+- modules
+- dictionaries
+- utilities (min, max, abs)
+- debugging (print)
+- get_time() / get_ticks()
