@@ -98,4 +98,19 @@ def polyculture(polyculture_tuple):
 		"src_coord": current_coord,
 		"companion_coord": c_coord,
 		"entity": c_ent
-	})
+	})	
+
+	
+def plant_cacti(param):
+	return farming.plant_till_and_water(Entities.Cactus, True)
+	
+
+def find_cacti_errors(param): # return True if sorting error, else False
+	found_error = False 
+	if get_pos_y() < get_world_size() -1:
+		if measure() > measure(North):
+			found_error = True
+	if get_pos_x() < get_world_size() - 1:
+		if measure() > measure(East):
+			found_error = True
+	return found_error

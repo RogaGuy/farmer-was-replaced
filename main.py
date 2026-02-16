@@ -3,6 +3,7 @@ import actions
 
 
 def run_pumpkins():
+	clear()
 	water_under_num_coords = 10
 	while True:
 		planted_coords = plot.traverse_plot(actions.pumpkins, False)
@@ -47,6 +48,38 @@ def run_polyculture():
 		# placeholder for dynamically calculating the desired entity
 
 
+def run_cacti():
+	clear()
+	while True:
+		plot.traverse_plot(actions.plant_cacti)
+		# when adding while loop, make sure to start on 0,0
+		num_swaps = 99
+		total_swaps = 0
+		
+		# while num_swaps > 0:
+		#	num_swaps = 0 # reset num_swaps to 0
+		for axis in range(2):
+			is_x_axis = (axis == 0)
+			for i in range(get_world_size()):
+				if is_x_axis:
+					plot.move_to_coordinate(0, i)
+				else:
+					plot.move_to_coordinate(i, 0)
+					
+				num_swaps += plot.sort_axis(is_x_axis)
+		total_swaps += num_swaps
+		error_list = plot.traverse_plot(actions.find_cacti_errors)
+		quick_print("Sorted x and y axis with " + str(num_swaps) + " swaps.")
+		quick_print("Finished in " + str(total_swaps) + " swaps!")
+		
+		harvest()
+		# clear() # just in case something went wrong. . .append
+		
+		# uncomment for debugging
+		#if error_list:
+			#quick_print("Sorting errors found!: " + str(len(error_list)))
+			
+	
 
 def main():
 	clear()
@@ -56,7 +89,8 @@ def main():
 	# run_sunflowers()
 	# run_pumpkins()
 	# run_sunflowers()
-	run_polyculture()
+	# run_polyculture()
+	run_cacti()
 
 
 if __name__ == '__main__':

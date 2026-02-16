@@ -33,6 +33,32 @@ def traverse_coordinates(coordinate_list, action, action_param=None):
 	return result_list
 
 
+def sort_axis(is_x_axis):
+	pos_dir = East
+	neg_dir = West
+	pos_check = get_pos_x
+	swaps = 0
+	
+	if not is_x_axis:
+		pos_dir = North
+		neg_dir = South
+		pos_check = get_pos_y
+
+	for i in range(1, get_world_size()):
+		move_on_axis(i, is_x_axis) # move to index of sort key
+		while pos_check() > 0 and measure() < measure(neg_dir):  # if compare_index = 0, key is the smallest element so far
+			swap_direction(neg_dir)
+			swaps += 1
+	return swaps
+			
+
+
+def swap_direction(direction):
+	swap(direction)
+	move(direction)
+	return None
+
+
 def get_nearest_coord_from_list(coordinate_list):
 	# disallow current coordinate unless only coord left
 	min_dist = 99
@@ -55,7 +81,6 @@ def get_axis_dist(from_point, to_point):
 	move_dist = (to_point - from_point) % get_world_size() # positive distance
 	if move_dist > get_world_size() / 2:
 		move_dist = (move_dist - get_world_size())
-	quick_print("from " + str(from_point) + " to " + str(to_point) + " is " + str(move_dist) + " distance")
 	return move_dist
 	
 
