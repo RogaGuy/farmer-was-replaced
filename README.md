@@ -74,3 +74,30 @@ Some areas need some small fixes and refactors, but we will start Part5 with som
 - dictionaries
 - utilities (min, max, abs)
 - debugging (print)
+
+## Part 4:
+### [Watch on Youtube](https://youtu.be/dSIF5xKvEdg)
+
+In part four, we tidy up some code, improve our traversal logic, and tackle polyculture!
+
+### Game Unlocks:
+- 8x8
+- Carrots
+- Bushes
+- Trees
+- Water
+- Pumpkins
+- Sunflowers
+- Polyculture
+
+
+### Python Unlocks
+- Loops
+- Operators
+- senses
+- lists & sets
+- functions
+- modules
+- dictionaries
+- utilities (min, max, abs)
+- debugging (print)
