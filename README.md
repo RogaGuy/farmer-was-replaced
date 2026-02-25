@@ -76,7 +76,7 @@ Some areas need some small fixes and refactors, but we will start Part5 with som
 - debugging (print)
 
 ## Part 4:
-### [Watch on Youtube - Coming Soon!]
+### [Watch on Youtube](https://youtu.be/dSIF5xKvEdg)
 
 In part four, we tidy up some code, improve our traversal logic, and tackle polyculture!
 
